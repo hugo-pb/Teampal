@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html>
   <head>
     <title>TeamPal</title>
@@ -118,10 +117,15 @@
             <div class="col-md-4">
               <h4 class="Name">Jocelyn Palomera</h4>
               <span class="foto"><img src="images/jocelyn.jpeg" alt="" /></span>
-           <p>Hi, I'm a react.js developer graduated from shecodes bootcamp.</p>
+              <p>
+                Hi, I'm a react.js developer graduated from shecodes bootcamp.
+              </p>
             </div>
             <div class="col-md-4">
-              <h4 class="Name">Kiara <br> "the cookie eater"</h4>
+              <h4 class="Name">
+                Kiara <br />
+                "the cookie eater"
+              </h4>
               <span class="foto"><img src="images/kiara.jpg" alt="" /></span>
               <p>
                 Woof, Kiara is the real brains behind team pal operations but in
@@ -134,7 +138,7 @@
         <!-- Contact -->
         <article id="contact">
           <h2 class="major">Contact</h2>
-          <form method="post" action="form.php">
+          <form method="POST" data-netlify="true">
             <div class="fields">
               <div class="field half">
                 <label for="name">Name</label>
@@ -149,6 +153,7 @@
                 <textarea name="message" id="message" rows="4"></textarea>
               </div>
             </div>
+            <div data-netlify-recaptcha="true"></div>
             <ul class="actions">
               <li>
                 <input type="submit" value="Send Message" class="primary" />
