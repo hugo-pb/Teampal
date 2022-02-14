@@ -1,12 +1,25 @@
-<?php
-if(isset($_post['submit']))
-$name = $_['name'];
-$mailfrom = $_['email'];
-$message = $_['message'];
 
-$mailTo = 'teampal@gmail.com';
-$headers = "from: ".$mailfrom;
-$txt = "new email from".$name.".\n\n".$message;
-mail($mailTo, $txt, $headers );
-header("Location: index.php?mailsend")
+<?php
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$message = $_POST['message'];
+
+$email_from = 'jocelyndaublas@gmail.com';
+
+$email_subject = 'New Form Submission';
+
+$email_body = "User Name: $name.\n".
+              "User Email: $visitor_email.\n".
+             
+              "User Message: $message.\n";
+
+$to = 'teampal2022@hotmial.com';
+$headers = "From: $email_from \r\n";
+
+$headers .= "Reply-To: $visitor_email \r\n";
+
+mail($to, $email_body, $headers);
+
+header("Location: index.html");
+
 ?>
